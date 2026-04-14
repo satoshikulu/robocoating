@@ -2,7 +2,7 @@ import React from 'react';
 import './WhatsAppButton.css';
 
 const WhatsAppButton = () => {
-  const phoneNumber = '905000000000'; // Replace with Mehmet Ali Altundal's actual phone number
+  const phoneNumber = '905557038888'; // Mehmet Ali Altundal's phone number
   const message = 'Merhaba! Size nasıl yardımcı olabilirim?';
   
   const handleWhatsAppClick = () => {
