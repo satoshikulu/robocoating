@@ -6,6 +6,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import News from './components/News'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 import './App.css'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         {currentSection === 'contact' && <Contact setCurrentSection={setCurrentSection} />}
       </main>
       <Footer setCurrentSection={setCurrentSection} />
+      <WhatsAppButton />
     </div>
   )
 }
