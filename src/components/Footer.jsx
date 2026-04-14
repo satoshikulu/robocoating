@@ -95,14 +95,6 @@ function Footer({ setCurrentSection }) {
                 <span className="icon">✉️</span>
                 <a href="mailto:info@robocoating.com">info@robocoating.com</a>
               </div>
-              <div className="contact-item" tabIndex={0}>
-                <span className="icon">📞</span>
-                <a href="tel:+902324588811">0232 458 88 11</a>
-              </div>
-              <div className="contact-item" tabIndex={0}>
-                <span className="icon">📱</span>
-                <a href="tel:+902324588812">0 232 458 88 12</a>
-              </div>
             </div>
 
             {/* Language Flags */}
