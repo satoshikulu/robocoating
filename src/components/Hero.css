@@ -99,6 +99,191 @@
   font-family: 'Anta', sans-serif;
 }
 
+/* Industrial Title Effect */
+.industrial-title {
+  position: relative;
+  cursor: pointer;
+  padding: 15px 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.industrial-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.industrial-title:hover::before {
+  left: 100%;
+}
+
+.metallic-text {
+  position: relative;
+  color: #fbbf24;
+  text-shadow: 
+    0 0 10px rgba(251, 191, 36, 0.5),
+    0 0 20px rgba(251, 191, 36, 0.3),
+    0 0 30px rgba(251, 191, 36, 0.2);
+  animation: industrialPulse 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes industrialPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(251, 191, 36, 0.5),
+      0 0 20px rgba(251, 191, 36, 0.3),
+      0 0 30px rgba(251, 191, 36, 0.2);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(251, 191, 36, 0.7),
+      0 0 30px rgba(251, 191, 36, 0.5),
+      0 0 45px rgba(251, 191, 36, 0.3),
+      0 0 60px rgba(251, 191, 36, 0.2);
+  }
+}
+
+.industrial-title:hover .metallic-text {
+  text-shadow: 
+    0 0 20px rgba(251, 191, 36, 0.8),
+    0 0 40px rgba(251, 191, 36, 0.6),
+    0 0 60px rgba(251, 191, 36, 0.4),
+    0 0 80px rgba(251, 191, 36, 0.3);
+  transform: scale(1.05);
+  letter-spacing: 3px;
+}
+
+/* Spark Particles */
+.spark-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #fbbf24;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkFly 1.2s ease-out forwards;
+  z-index: 10;
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.8);
+}
+
+@keyframes sparkFly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx, 40px), var(--ty, -80px)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Industrial Bottom Line Effect */
+.industrial-line {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+  transition: width 0.6s ease;
+  box-shadow: 
+    0 0 10px rgba(251, 191, 36, 0.8),
+    0 0 20px rgba(251, 191, 36, 0.4);
+}
+
+.industrial-title:hover .industrial-line {
+  width: 100%;
+}
+
+/* Industrial Gear Animation */
+.industrial-title::before {
+  content: '⚙';
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  font-size: 24px;
+  color: rgba(251, 191, 36, 0.6);
+  transform: translateY(-50%);
+  animation: gearRotate 4s linear infinite;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+}
+
+@keyframes gearRotate {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Second Gear on Right */
+.industrial-title::after {
+  content: '⚙';
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  font-size: 20px;
+  color: rgba(251, 191, 36, 0.5);
+  transform: translateY(-50%);
+  animation: gearRotateReverse 3s linear infinite;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+}
+
+@keyframes gearRotateReverse {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(-360deg);
+  }
+}
+
+.industrial-title:hover::before,
+.industrial-title:hover::after {
+  color: rgba(251, 191, 36, 1);
+  text-shadow: 
+    0 0 15px rgba(251, 191, 36, 0.8),
+    0 0 30px rgba(251, 191, 36, 0.5);
+}
+
+/* Welding Effect on Hover */
+.industrial-title:active .metallic-text {
+  animation: weldingFlicker 0.2s ease-in-out 3;
+}
+
+@keyframes weldingFlicker {
+  0%, 100% {
+    text-shadow: 
+      0 0 20px rgba(251, 191, 36, 0.8),
+      0 0 40px rgba(251, 191, 36, 0.6);
+  }
+  25% {
+    text-shadow: 
+      0 0 30px rgba(251, 191, 36, 1),
+      0 0 60px rgba(255, 255, 255, 0.5),
+      0 0 80px rgba(251, 191, 36, 0.8);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(251, 191, 36, 0.6),
+      0 0 30px rgba(251, 191, 36, 0.4);
+  }
+  75% {
+    text-shadow: 
+      0 0 25px rgba(251, 191, 36, 0.9),
+      0 0 50px rgba(255, 255, 255, 0.4),
+      0 0 70px rgba(251, 191, 36, 0.7);
+  }
+}
+
 .hero-text h1 {
   font-size: 68px;
   font-weight: 400;
@@ -167,6 +352,10 @@
   .hero-text h1 {
     font-size: 52px;
   }
+  
+  .metallic-text {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -181,6 +370,14 @@
   }
 
   .hero-label {
+    font-size: 14px;
+  }
+  
+  .industrial-title {
+    padding: 10px 20px;
+  }
+  
+  .metallic-text {
     font-size: 14px;
   }
 

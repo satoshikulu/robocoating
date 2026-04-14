@@ -10,6 +10,7 @@ import powderApplication from '../../assets/Powder Application-min.jpg'
 
 function Hero({ setCurrentSection }) {
   const contentRef = useRef(null)
+  const titleRef = useRef(null)
 
   useEffect(() => {
     // Trigger animation on mount
@@ -20,6 +21,25 @@ function Hero({ setCurrentSection }) {
     }, 100)
     return () => clearTimeout(timer)
   }, [])
+
+  // Spark effect on mouse move
+  const handleMouseMove = (e) => {
+    if (!titleRef.current) return
+    
+    const rect = titleRef.current.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    
+    // Create spark particle
+    const spark = document.createElement('div')
+    spark.className = 'spark-particle'
+    spark.style.left = `${x}px`
+    spark.style.top = `${y}px`
+    titleRef.current.appendChild(spark)
+    
+    // Remove spark after animation
+    setTimeout(() => spark.remove(), 1000)
+  }
 
   const backgroundImages = [
     lesta1,
@@ -54,7 +74,14 @@ function Hero({ setCurrentSection }) {
       <div className="container">
         <div className="hero-content">
           <div ref={contentRef} className="hero-text scroll-fade-in">
-            <div className="hero-label">Robocoating</div>
+            <div 
+              ref={titleRef}
+              className="hero-label industrial-title"
+              onMouseMove={handleMouseMove}
+            >
+              <span className="metallic-text">Robocoating</span>
+              <div className="industrial-line"></div>
+            </div>
             <h1>
               BOYAMA TEKNOLOJİSİNDE
               <br />
