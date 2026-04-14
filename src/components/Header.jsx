@@ -206,7 +206,7 @@ function Header({ currentSection, setCurrentSection }) {
                   </button>
                 </li>
                 <li>
-                  <button className="catalog-btn" onClick={() => setCurrentSection('contact')}>
+                  <button className="catalog-btn" onClick={() => setCurrentSection('catalog')}>
                     <span className="btn-icon">→</span>
                     <span>KATALOG</span>
                   </button>

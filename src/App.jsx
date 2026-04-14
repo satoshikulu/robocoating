@@ -5,6 +5,7 @@ import Services from './components/Services'
 import About from './components/About'
 import Contact from './components/Contact'
 import News from './components/News'
+import Catalog from './components/Catalog'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import './App.css'
@@ -26,6 +27,7 @@ function App() {
         {currentSection === 'about' && <About />}
         {currentSection === 'news' && <News setCurrentSection={setCurrentSection} />}
         {currentSection === 'contact' && <Contact setCurrentSection={setCurrentSection} />}
+        {currentSection === 'catalog' && <Catalog setCurrentSection={setCurrentSection} />}
       </main>
       <Footer setCurrentSection={setCurrentSection} />
       <WhatsAppButton />
