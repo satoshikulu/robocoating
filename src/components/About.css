@@ -1,0 +1,174 @@
+.about {
+  background: white;
+  padding: 80px 0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+.about-text .lead {
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.features {
+  margin-top: 40px;
+  display: grid;
+  gap: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.feature-item .check {
+  font-size: 28px;
+  color: var(--success-color);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.feature-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 60px;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+}
+
+.image-box .icon {
+  font-size: 120px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.image-box p {
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text h2 {
+    font-size: 36px;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .image-box {
+    min-height: 350px;
+    padding: 40px;
+  }
+
+  .image-box .icon {
+    font-size: 80px;
+  }
+
+  .image-box p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .about-text .lead {
+    font-size: 18px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+
+  .feature-item {
+    padding: 15px;
+  }
+
+  .feature-item h4 {
+    font-size: 16px;
+  }
+}
