@@ -211,6 +211,14 @@ function Header({ currentSection, setCurrentSection }) {
                     <span>KATALOG</span>
                   </button>
                 </li>
+                <li>
+                  <button 
+                    className={currentSection === 'about' ? 'active' : ''}
+                    onClick={() => setCurrentSection('about')}
+                  >
+                    HAKKIMIZDA
+                  </button>
+                </li>
               </ul>
             </nav>
 

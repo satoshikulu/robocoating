@@ -1,11 +1,12 @@
 import './Catalog.css'
+import paintrobot from '../assets/paintrobot.png'
 
 function Catalog({ setCurrentSection }) {
   const catalogImages = [
     {
       title: 'Robot Boyama Sistemi',
       description: '6 eksenli endüstriyel robot ile hassas boyama uygulamaları',
-      image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&h=600&fit=crop&q=80'
+      image: 'https://images.unsplash.com/photo-1731781911606-2386b4865bda?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
       title: 'Otomatik Boyama Hattı',
@@ -20,17 +21,17 @@ function Catalog({ setCurrentSection }) {
     {
       title: 'Yüzey Hazırlık Teknolojisi',
       description: 'İleri teknoloji yüzey hazırlık sistemleri',
-      image: 'https://images.unsplash.com/photo-1558618666-fa982d6a3697?w=800&h=600&fit=crop&q=80'
+      image: paintrobot
     },
     {
       title: 'Kalite Kontrol Sistemleri',
       description: 'Otomatik kalite kontrol ve test ekipmanları',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80'
+      image: 'https://plus.unsplash.com/premium_photo-1667509322957-9c4649741ee3?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
       title: 'Otomasyon Çözümleri',
       description: 'Endüstri 4.0 tam entegre otomasyon sistemleri',
-      image: 'https://images.unsplash.com/photo-1565043666705-5f2d605b6721?w=800&h=600&fit=crop&q=80'
+      image: 'https://plus.unsplash.com/premium_photo-1764691314995-1f969f5be043?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     }
   ]
 
